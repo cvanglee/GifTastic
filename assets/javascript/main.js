@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Initial topics array
     var topics = ["Canada", "Cuba", "China", "Cambodia", "Colombia", "Cyprus"];
-    
+
     // Function for pulling the Gifs for each button
     function showGiphy(){
         var topic = $(this).attr("data-name");
@@ -15,12 +15,14 @@ $(document).ready(function(){
             for (let i=0; i<results.length; i++){
                 // Creating a div for the Giphy
                 var giphyDiv = $("<div>");
+                giphyDiv.addClass('gClass float-left');
                 // Creating a ptag with the rating
-                var ptag = $("<p>").text("Rating: " + results[i].rating);
+                var ptag = $("<div>").text("Rating: " + results[i].rating);
+                ptag.addClass('col-md-12 d-flex justify-content-center align-self-end');
                 // Creating an image tag for the Giphy
                 var topicImage = $("<img>");
 
-                topicImage.addClass("giphy");
+                topicImage.addClass("giphy img-fluid");
 
                 topicImage.attr("still",results[i].images.fixed_height_still.url);
                 
@@ -63,7 +65,7 @@ $(document).ready(function(){
             // Add the $("<button>")
             var q = $("<button>");
             // Add the topic class to button
-            q.addClass('topic');
+            q.addClass('topic btn');
             // Add a data-attribute
             q.attr("data-name", topics[i]);
             // Adds the text to the button
@@ -78,12 +80,15 @@ $(document).ready(function(){
         event.preventDefault();
 
         var topic = $('#topic-input').val().trim();
-
+        if(topic !== ""){
         topics.push(topic);
         console.log("Topics are: ",topics)
 
         loadButtons();
+        }
+        $("#topic-input").val("");
     });
+    
     $(document).on("click", ".topic", showGiphy);
     loadButtons();
 });

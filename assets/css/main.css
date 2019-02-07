@@ -1,0 +1,50 @@
+body {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+.container-fluid h1 {
+    color: gray;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+button {
+    background-color: darkslateblue;
+    color: white;
+    padding: 5px;
+    font-weight: bolder;
+
+}
+
+.topic {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin: 5px;   
+}
+
+label {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#topic-form {
+    margin-bottom: 20px;
+  
+}
+
+#add-button {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.gClass img {
+    margin: 10px;
+    width: 250px;
+    height: 200px;
+}
+
+.gClass {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#giphy-show{
+    float: left;
+    margin: 10px;
+}
