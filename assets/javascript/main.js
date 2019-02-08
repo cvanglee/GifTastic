@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Initial topics array
     var topics = ["Canada", "Cuba", "China", "Cambodia", "Colombia", "Cyprus"];
-
+    var favorites = [];
     // Function for pulling the Gifs for each button
     function showGiphy(){
         var topic = $(this).attr("data-name");
@@ -18,11 +18,11 @@ $(document).ready(function(){
                 giphyDiv.addClass('gClass float-left');
                 // Creating a ptag with the rating
                 var ptag = $("<div>").text("Rating: " + results[i].rating);
-                ptag.addClass('col-md-12 d-flex justify-content-center align-self-end');
+
                 // Creating an image tag for the Giphy
                 var topicImage = $("<img>");
 
-                topicImage.addClass("giphy img-fluid");
+                topicImage.addClass("col-md-12 giphy");
 
                 topicImage.attr("still",results[i].images.fixed_height_still.url);
                 
@@ -31,9 +31,8 @@ $(document).ready(function(){
                 topicImage.attr("src", $(topicImage).attr("still"));
 
                 topicImage.attr("img-state", "still");
-                
-                giphyDiv.append(topicImage);
                 giphyDiv.append(ptag);
+                giphyDiv.append(topicImage);
 
                 $('#giphy-show').append(giphyDiv);
             }
