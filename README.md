@@ -16,5 +16,5 @@ The page says enter a country that starts with a C, but you can really enter any
 
 ## Links
 
-- Deployment page: https://pet-park.herokuapp.com/
-- Repository: https://github.com/JoshVanOverbeke/Project2
+- Deployment page: https://cvanglee.github.io/GifTastic/
+- Repository: 
